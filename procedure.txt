@@ -1,0 +1,50 @@
+First I have created a virtualenv the install Django
+step 1: python -m venv venv
+
+step 2: venv/Scripts/activate
+
+step 3: pip install django
+
+step 4: pip install djangorestframework
+
+step 5: django-admin startproject spam_detector
+
+step 6: cd spam_detector
+
+step 7: python manage.py startapp api
+
+step 8: created management/commands/populate_data.py file for testing
+
+step 9: created serializers.py file for converting data to json format
+
+step 10: created views.py file for creating api
+
+step 11: created urls.py file for routing
+
+step 12: python manage.py populate_data
+
+step 13: python manage.py createsuperuser
+
+step 14: python manage.py makemigrations
+
+step 15: python manage.py migrate
+
+step 16: python manage.py runserver
+
+to registration:
+url: http://127.0.0.1:8000/api/register/
+
+to login:
+url: http://127.0.0.1:8000/api/login/
+
+to check profile
+url: http://127.0.0.1:8000/api/profile/<str:phone_number>/
+
+to search a number and its details:
+url : http://127.0.0.1:8000/api/search/?query=<str:phone_number>
+or
+url: http://127.0.0.1:8000/api/search/?query=<str:name>
+
+to mark someone's number as a spam
+url : http://127.0.0.1:8000/api/mark-spam/
+
